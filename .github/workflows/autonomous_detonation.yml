@@ -1,4 +1,4 @@
-name: Autonomous KEIP Detonation Worker (rdp1)
+name: Autonomous KEIP Detonation Worker (rdp10)
 
 on:
   workflow_dispatch:
@@ -20,4 +20,4 @@ jobs:
       - name: Execute Sharded Detonation Worker
         run: |
           cd ~/keipv2
-          sudo python3 step5.py --queue "rdp_worker/rdp1_4_malware_queue.csv" --output "rdp_worker/rdp1_5_analyzed_malwares_output.jsonl"
+          sudo python3 step5.py --queue "rdp_worker/rdp10_4_malware_queue.csv" --output "rdp_worker/rdp10_5_analyzed_malwares_output.jsonl"
