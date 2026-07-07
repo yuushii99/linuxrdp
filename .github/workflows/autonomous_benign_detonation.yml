@@ -20,4 +20,8 @@ jobs:
       - name: Execute Sharded Benign Detonation Worker
         run: |
           cd ~/keipv2
-          sudo python3 src/step3.py --queue "rdp_worker_benign/rdp10_2_unique_pypi_packages.csv" --output "rdp_worker_benign/rdp10_3_analyzed_packages_output.jsonl"
+          git config --global user.email "worker@keip.research"
+          git config --global user.name "KEIP Worker"
+          sudo git config --global user.email "worker@keip.research"
+          sudo git config --global user.name "KEIP Worker"
+          sudo python3 step3.py --queue "rdp_worker_benign/rdp10_2_unique_pypi_packages.csv" --output "rdp_worker_benign/rdp10_3_analyzed_packages_output.jsonl"
